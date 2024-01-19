@@ -1,0 +1,16 @@
+version: '3'
+services:
+  server:
+    build: ./server
+    ports:
+      - "5050:5050"
+    networks:
+      - mynetwork
+  client:
+    build: ./client
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
+
+
